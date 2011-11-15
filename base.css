@@ -1,0 +1,45 @@
+body
+{
+    background: #C0C0C0;
+    color: #343434;
+    font-size: 11px;
+    font-family: sans, 'Arial';
+    padding: 10 40 0 40;
+}
+
+p 
+{
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 1em;
+}
+
+blockquote 
+{
+    font-size: 1.2em;
+    padding-left: 1em;
+    border-left: 4px solid #ccc;
+}
+
+blockquote cite 
+{
+    font-size:.9em;
+}
+
+ul, ol 
+{
+    padding-top: 0;
+}
+
+table 
+{
+    border: 0px;
+    margin-bottom: 10px;
+}
+
+h1
+{
+  margin-left: 1em;
+  margin-right: 1em;
+  color: #434343;
+}
