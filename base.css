@@ -34,7 +34,6 @@ ul, ol
 table 
 {
     border: 0px;
-    margin-bottom: 10px;
 }
 
 h1
@@ -42,4 +41,28 @@ h1
   margin-left: 1em;
   margin-right: 1em;
   color: #434343;
+}
+
+h3
+{
+  margin-left: 1em;
+  margin-right: 1em;
+  color: #434343;
+}
+
+#box td
+{
+    padding: 4px 10px 4px 10px;
+}
+
+#code table
+{
+    padding: 8px 24px 16px 24px;
+    font-family: monospace;
+}
+
+#code td
+{
+  padding: 12px 12px 12px 12px;
+  border-style: dashed;
 }

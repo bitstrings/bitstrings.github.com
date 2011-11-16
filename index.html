@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;
@@ -10,7 +10,8 @@
   <body style=" color: rgb(0, 0, 0);" alink="#EE0000" link="#0000EE"
     vlink="#551A8B">
     <table style=" text-align: left; width: 100%; background-color:
-      rgb(255, 255, 255);" border="0" cellpadding="0" cellspacing="0">
+      rgb(255, 255, 255); padding-top: 0pt; padding-bottom: 10px;"
+      border="0" cellpadding="0" cellspacing="0">
       <tbody>
         <tr>
           <td style=" vertical-align: top;">
@@ -34,25 +35,206 @@
       </tbody>
     </table>
     <br>
-    <table style=" text-align: left; width: 100%; background-color:
-      rgb(255, 255, 255);" border="0" cellpadding="0" cellspacing="0">
-      <tbody>
-        <tr style="color: rgb(255, 255, 255); font-weight: bold;">
-          <td style=" vertical-align: top; background-color: #770000;"><br>
-          </td>
-        </tr>
-        <tr>
-          <td style="vertical-align: top;"><br>
-            <h1>Title</h1>
-            <p>some Text<br>
-            </p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div id="box">
+      <table style=" text-align: left; width: 100%; background-color:
+        white; vertical-align: middle;" border="0" cellpadding="0"
+        cellspacing="0">
+        <tbody>
+          <tr style="color: rgb(255, 255, 255); font-weight: bold;">
+            <td style=" background-color: rgb(119, 0, 0);
+              vertical-align: middle;">
+              <table style=" color: white; font-weight: bold;"
+                border="0" cellpadding="0" cellspacing="2">
+                <tbody>
+                  <tr>
+                    <td>Maven Plugins</td>
+                    <td>M2E Connectors</td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style=" vertical-align: top; padding-top: 15px;
+              padding-bottom: 10px;">
+              <h1>M2E Plugins</h1>
+              <h3>dependencypath-maven-plugin</h3>
+              <p>Sets Maven properties to the artifact file. Each
+                property name will have a base name in form of <span
+                  style="font-style: italic;">groupId:artifactId:type:[classifier][.relative][.suffix]</span>.<br>
+              </p>
+              <p> <span style="font-weight: bold;">Site</span>: <br>
+                <span style="font-weight: bold;">github</span>: <a
+                  href="https://github.com/bitstrings/dependencypath-maven-plugin">https://github.com/bitstrings/dependencypath-maven-plugin</a></p>
+              <div id="code">
+                <table style=" text-align: left; width: 100%;"
+                  border="1" cellpadding="2" cellspacing="2">
+                  <tbody>
+                    <tr>
+                      <td style=" vertical-align: top;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;plugin&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;groupId&gt;org.bitstrings.maven.plugins&lt;/groupId&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;artifactId&gt;dependencypath-maven-plugin&lt;/artifactId&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;version&gt;1.0.1&lt;/version&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;executions&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;execution&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;id&gt;set-all&lt;/id&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;goals&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;goal&gt;set&lt;/goal&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;/goals&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;/execution&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;execution&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;id&gt;set-relatives&lt;/id&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;goals&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;goal&gt;set&lt;/goal&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;/goals&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;configuration&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;propertySets&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;propertySet /&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;propertySet&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;suffix&gt;basedir&lt;/suffix&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;relativeTo&gt;${basedir}&lt;/relativeTo&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;/propertySet&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;propertySet&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;suffix&gt;target&lt;/suffix&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&lt;relativeTo&gt;${project.build.directory}&lt;/relativeTo&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;/propertySet&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;/propertySets&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;/configuration&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;/execution&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;/executions&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        &lt;/plugin&gt;<br>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h1>M2E Connectors<br>
+              </h1>
+              <p><span style="font-weight: bold;">github</span>: <a
+                  href="https://github.com/bitstrings/m2e-connectors">https://github.com/bitstrings/m2e-connectors</a><br>
+              </p>
+              <h3><span style="font-weight: bold;">P2 Repositories</span></h3>
+              <h3><span style="font-weight: bold;"></span></h3>
+              <p><span style="font-weight: bold;">releases (available
+                  from catalog): </span><a
+                  href="http://bitstrings.github.com/m2e-connectors-p2/releases">http://bitstrings.github.com/m2e-connectors-p2/releases</a><br>
+                <span style="font-weight: bold;">milestones (supports
+                  m2e 1.1.0): </span><a
+                  href="http://bitstrings.github.com/m2e-connectors-p2/milestones">http://bitstrings.github.com/m2e-connectors-p2/milestones</a><br>
+              </p>
+              <h3>Plugin mapping<br>
+              </h3>
+              <p><span style="font-weight: bold;">Plugin</span>:
+                org.jvnet.jaxb2.maven2:maven-jaxb2-plugin<span
+                  style="font-weight: bold;"><br>
+                  <small>Home</small></span><small>: <a
+                    href="http://java.net/projects/maven-jaxb2-plugin/pages/Home">http://java.net/projects/maven-jaxb2-plugin/pages/Home</a></small><span
+                  style="font-weight: bold;"><br>
+                </span></p>
+              <p><span style="font-weight: bold;">Plugin</span>:
+                org.codehaus.mojo:jaxb2-maven-plugin<br>
+                <small><span style="font-weight: bold;">Home</span>: <a
+                    href="http://mojo.codehaus.org/jaxb2-maven-plugin">http://mojo.codehaus.org/jaxb2-maven-plugin</a></small><br>
+              </p>
+              <p><span style="font-weight: bold;">Plugin</span>:
+                org.codehaus.mojo:xmlbeans-maven-plugin<br>
+                <small><span style="font-weight: bold;">Home</span>: <a
+href="http://mojo.codehaus.org/xmlbeans-maven-plugin">http://mojo.codehaus.org/xmlbeans-maven-plugin</a></small><br>
+              </p>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <br>
     Copyright &copy; 2011 bitstrings.org - Pino Silvaggio - Licensed
     under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
