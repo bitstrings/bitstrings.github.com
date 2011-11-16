@@ -7,31 +7,31 @@ body
     padding: 10 40 0 40;
 }
 
-p 
+p
 {
     margin-left: 2em;
     margin-right: 2em;
     margin-bottom: 1em;
 }
 
-blockquote 
+blockquote
 {
     font-size: 1.2em;
     padding-left: 1em;
     border-left: 4px solid #ccc;
 }
 
-blockquote cite 
+blockquote cite
 {
     font-size:.9em;
 }
 
-ul, ol 
+ul, ol
 {
     padding-top: 0;
 }
 
-table 
+table
 {
     border: 0px;
 }
@@ -65,4 +65,6 @@ h3
 {
   padding: 12px 12px 12px 12px;
   border-style: dashed;
+  white-space: pre;
+
 }
