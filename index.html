@@ -70,39 +70,32 @@
                   border="1" cellpadding="2" cellspacing="2">
                   <tbody>
                     <tr>
-                      <td style=" vertical-align: top;">&lt;plugin&gt;
+                      <td style=" vertical-align: top;">    &lt;plugin&gt;
         &lt;groupId&gt;org.bitstrings.maven.plugins&lt;/groupId&gt;
         &lt;artifactId&gt;dependencypath-maven-plugin&lt;/artifactId&gt;
-        &lt;version&gt;1.0.1&lt;/version&gt;
         &lt;executions&gt;
-                &lt;execution&gt;
+            &lt;execution&gt;
                 &lt;id&gt;set-all&lt;/id&gt;
                 &lt;goals&gt;
-                        &lt;goal&gt;set&lt;/goal&gt;
+                    &lt;goal&gt;set&lt;/goal&gt;
                 &lt;/goals&gt;
-                &lt;/execution&gt;
-                &lt;execution&gt;
-                &lt;id&gt;set-relatives&lt;/id&gt;
+            &lt;/execution&gt;
+            &lt;execution&gt;
+                &lt;id&gt;set-relative-builddir&lt;/id&gt;
                 &lt;goals&gt;
-                        &lt;goal&gt;set&lt;/goal&gt;
+                    &lt;goal&gt;set&lt;/goal&gt;
                 &lt;/goals&gt;
                 &lt;configuration&gt;
-                        &lt;propertySets&gt;
-                        &lt;propertySet /&gt;
+                    &lt;propertySets&gt;
                         &lt;propertySet&gt;
-                                &lt;suffix&gt;basedir&lt;/suffix&gt;
-                                &lt;relativeTo&gt;${basedir}&lt;/relativeTo&gt;
+                            &lt;suffix&gt;target&lt;/suffix&gt;
+                            &lt;relativeTo&gt;${project.build.directory}&lt;/relativeTo&gt;
                         &lt;/propertySet&gt;
-                        &lt;propertySet&gt;
-                                &lt;suffix&gt;target&lt;/suffix&gt;
-                                &lt;relativeTo&gt;${project.build.directory}&lt;/relativeTo&gt;
-                        &lt;/propertySet&gt;
-                        &lt;/propertySets&gt;
+                    &lt;/propertySets&gt;
                 &lt;/configuration&gt;
-                &lt;/execution&gt;
+            &lt;/execution&gt;
         &lt;/executions&gt;
-&lt;/plugin&gt;
-</td>
+    &lt;/plugin&gt;</td>
                     </tr>
                   </tbody>
                 </table>
