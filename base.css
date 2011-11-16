@@ -9,6 +9,7 @@ body
 
 p
 {
+    min-width: 1024px;
     margin-left: 2em;
     margin-right: 2em;
     margin-bottom: 1em;
