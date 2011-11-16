@@ -64,7 +64,7 @@
                   style="font-style: italic;">groupId:artifactId:type:[classifier][.relative][.suffix]</span>. This is similar to the <i>dependency:properties</i> goal but with additional features, like setting a relative path and filtering.<br></p>
               <p> <span style="font-weight: bold;">Site</span>: <br>
                 <span style="font-weight: bold;">github</span>: <a
-                  href="https://github.com/bitstrings/dependencypath-maven-plugin">https://github.com/bitstrings/dependencypath-maven-plugin</a></p>
+                  href="https://github.com/bitstrings/dependencypath-maven-plugin">https://github.com/bitstrings/dependencypath-maven-plugin</a><br><br><br><b>Quick example</b><br><br>The <i>set-all</i> execution will set a property for each dependency including transitives of the project which value is the absolute path to the artifact as resolved by Maven. Suppose you depend on junit then you will have access to ${junit:junit:jar} which is the absolute path to the junit jar artifact.<br><br>The <i>set-relative-builddir</i> will set a property for each dependency including transitives of the project which value is the relative path (relative to ${project.build.directory}) to the artifact as resolved by Maven. Suppose you depend on junit then you will have access to ${junit:junit:jar.relative.builddir} which is the relative path to the junit jar artifact. Notice that we explicitly added the <i>builddir</i> suffix, while the <i>relative</i> suffix is implicit.  </p>
               <div id="code">
                 <table style=" text-align: left; width: 100%;"
                   border="1" cellpadding="2" cellspacing="2">
@@ -88,7 +88,7 @@
                 &lt;configuration&gt;
                     &lt;propertySets&gt;
                         &lt;propertySet&gt;
-                            &lt;suffix&gt;target&lt;/suffix&gt;
+                            &lt;suffix&gt;builddir&lt;/suffix&gt;
                             &lt;relativeTo&gt;${project.build.directory}&lt;/relativeTo&gt;
                         &lt;/propertySet&gt;
                     &lt;/propertySets&gt;
