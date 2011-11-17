@@ -2,30 +2,34 @@ body
 {
     background: #C0C0C0;
     color: #343434;
-    font-size: 0.5em;
+    font-size: 0.9em;
     font-family: sans, 'Arial';
     padding: 10 40 0 40;
 }
 
 p
 {
-    font-size: 0.9em;
+    font-size: 1.0em;
     min-width: 1024px;
     margin-left: 2em;
     margin-right: 2em;
     margin-bottom: 1em;
 }
 
+a
+{
+    color: #30306A;
+    text-decoration: none;
+}
+
 blockquote
 {
-    font-size: 1.0em;
     padding-left: 1em;
     border-left: 4px solid #ccc;
 }
 
 blockquote cite
 {
-    font-size:0.8em;
 }
 
 ul, ol
@@ -41,6 +45,14 @@ table
 h1
 {
     font-size: 1.4em;
+    margin-left: 1em;
+    margin-right: 1em;
+    color: #434343;
+}
+
+h2
+{
+    font-size: 1.25em;
     margin-left: 1em;
     margin-right: 1em;
     color: #434343;
@@ -70,4 +82,11 @@ h3
   padding: 12px 12px 12px 12px;
   border-style: dashed;
   white-space: pre;
+}
+
+#ref a
+{
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
 }

@@ -47,8 +47,8 @@
                 border="0" cellpadding="0" cellspacing="2">
                 <tbody>
                   <tr>
-                    <td>Maven Plugins</td>
-                    <td>M2E Connectors</td>
+                    <td><div id="ref"><a href="#mavenPlugins">Maven Plugins</a></div></td>
+                    <td><div id="ref"><a href="#m2eConnectors">M2E Connectors</a></div></td>
                   </tr>
                 </tbody>
               </table>
@@ -57,20 +57,20 @@
           <tr>
             <td style=" vertical-align: top; padding-top: 15px;
               padding-bottom: 10px;">
-              <h1>Maven Plugins</h1>
+<a name="mavenPlugins"><h1>Maven Plugins</h1></a>
               <h3>dependencypath-maven-plugin</h3>
-              <p>Sets Maven properties to the artifact file. Each
+              <p>Sets a property pointing to the artifact file for each selected project dependency. Each
                 property name will have a base name in form of <span
                   style="font-style: italic;">groupId:artifactId:type:[classifier][.relative][.suffix]</span>. This is similar to the <i>dependency:properties</i> goal but with additional features, like setting a relative path and filtering.<br></p>
-              <p> <span style="font-weight: bold;">Site</span>: <br>
+              <p> <span style="font-weight: bold;">Documentation</span>: <a href="sites/dependencypath-maven-plugin">http://bitstrings.github.com/sites/dependencypath-maven-plugin</a><br>
                 <span style="font-weight: bold;">github</span>: <a
-                  href="https://github.com/bitstrings/dependencypath-maven-plugin">https://github.com/bitstrings/dependencypath-maven-plugin</a><br><br><br><b>Quick example</b><br><br>The <i>set-all</i> execution will set a property for each dependency including transitives of the project which value is the absolute path to the artifact as resolved by Maven. Suppose you depend on junit then you will have access to ${junit:junit:jar} which is the absolute path to the junit jar artifact.<br><br>The <i>set-relative-builddir</i> will set a property for each dependency including transitives of the project which value is the relative path (relative to ${project.build.directory}) to the artifact as resolved by Maven. Suppose you depend on junit then you will have access to ${junit:junit:jar.relative.builddir} which is the relative path to the junit jar artifact. Notice that we explicitly added the <i>builddir</i> suffix, while the <i>relative</i> suffix is implicit.  </p>
+                  href="https://github.com/bitstrings/dependencypath-maven-plugin">https://github.com/bitstrings/dependencypath-maven-plugin</a><br><br><br><b>Quick example</b><br><br>The <i>set-all</i> execution will set a property for each dependency (including transitive) of the project which value is the absolute path of the artifact as resolved by Maven. Suppose you depend on junit then you will have access to ${junit:junit:jar} which is the absolute path to the junit jar artifact.<br><br>The <i>set-relative-builddir</i> will set a property for each dependency (except transitive) of the project which value is the relative path (relative to ${project.build.directory}) to the artifact as resolved by Maven. Suppose you depend on junit then you will have access to ${junit:junit:jar.relative.builddir} which is the relative path to the junit jar artifact. Notice that we explicitly added the <i>builddir</i> suffix, while the <i>relative</i> suffix is implicit.  </p>
               <div id="code">
                 <table style=" text-align: left; width: 100%;"
                   border="1" cellpadding="2" cellspacing="2">
                   <tbody>
                     <tr>
-                      <td style=" vertical-align: top;">    &lt;plugin&gt;
+                      <td style=" vertical-align: middle;">    &lt;plugin&gt;
         &lt;groupId&gt;org.bitstrings.maven.plugins&lt;/groupId&gt;
         &lt;artifactId&gt;dependencypath-maven-plugin&lt;/artifactId&gt;
         &lt;executions&gt;
@@ -90,6 +90,7 @@
                         &lt;propertySet&gt;
                             &lt;suffix&gt;builddir&lt;/suffix&gt;
                             &lt;relativeTo&gt;${project.build.directory}&lt;/relativeTo&gt;
+                            &lt;transitive&gt;false&lt;/transitive&gt;
                         &lt;/propertySet&gt;
                     &lt;/propertySets&gt;
                 &lt;/configuration&gt;
@@ -100,7 +101,7 @@
                   </tbody>
                 </table>
               </div>
-              <h1>M2E Connectors<br>
+<a name="m2eConnectors"><h1>M2E Connectors</h1></a>
               </h1>
               <p><span style="font-weight: bold;">github</span>: <a
                   href="https://github.com/bitstrings/m2e-connectors">https://github.com/bitstrings/m2e-connectors</a><br>
@@ -140,7 +141,7 @@ href="http://mojo.codehaus.org/xmlbeans-maven-plugin">http://mojo.codehaus.org/x
       </table>
     </div>
     <br>
-    Copyright &copy; 2011 bitstrings.org - Pino Silvaggio - Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br>
+    <p>Copyright &copy; 2011 bitstrings.org - Pino Silvaggio - Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br></p>
     <br>
   </body>
 </html>
