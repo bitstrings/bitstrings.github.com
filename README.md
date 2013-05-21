@@ -1,4 +1,4 @@
-# Website for bitstrings.org #
+# www.bitstrings.org #
 
 ## Maven Plugins ##
 
