@@ -37,8 +37,7 @@
     <br>
     <div id="box">
       <table style=" text-align: left; width: 100%; background-color:
-        white; vertical-align: middle;" border="0" cellpadding="0"
-        cellspacing="0">
+        white; vertical-align: middle;" border="0" cellpadding="0" cellspacing="0">
         <tbody>
           <tr style="color: rgb(255, 255, 255); font-weight: bold;">
             <td style=" background-color: rgb(119, 0, 0);
@@ -55,8 +54,90 @@
             </td>
           </tr>
           <tr>
-            <td style=" vertical-align: top; padding-top: 15px;
-              padding-bottom: 10px;"><a name="mavenPlugins"><h1>Maven Plugins</h1></a>
+            <td style=" vertical-align: top; padding-top: 15px; padding-bottom: 10px;">
+              <a name="mavenPlugins"><h1>Maven Plugins</h1></a>
+              <table border="0" cellpadding="0" cellspacing="0">
+              <tr>
+              <td>
+              <h3>splasher-maven-plugin (avaliable from the Maven central repository)</h3>
+              <p>The splasher plugin can be used to compose a splash screen. It can complement an existing splash or create one from scratch.<br></p>
+              <p> <span style="font-weight: bold;">Documentation</span>: <a href="sites/splasher-maven-plugin/index.html">http://bitstrings.github.com/sites/splasher-maven-plugin</a><br>
+                <span style="font-weight: bold;">github</span>: <a
+                  href="https://github.com/bitstrings/splasher-maven-plugin">https://github.com/bitstrings/splasher-maven-plugin</a><br><br><br><b>Quick example</b><br></p>
+              <div id="code">
+                <table style=" text-align: left; width: 100%;"
+                  border="1" cellpadding="2" cellspacing="2">
+                  <tbody>
+                    <tr>
+                      <td style=" vertical-align: middle;">&lt;plugin&gt;
+    &lt;groupId&gt;org.bitstrings.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;splasher-maven-plugin&lt;/artifactId&gt;
+    &lt;executions&gt;
+        &lt;execution&gt;
+            &lt;id&gt;splash&lt;/id&gt;
+            &lt;phase&gt;generate-resources&lt;/phase&gt;
+            &lt;goals&gt;
+                &lt;goal&gt;compose&lt;/goal&gt;
+            &lt;/goals&gt;
+            &lt;configuration&gt;
+                &lt;resources&gt;
+                    &lt;loadImage&gt;
+                        &lt;imageFile&gt;src/main/splasher/crosshair.png&lt;/imageFile&gt;
+                        &lt;name&gt;crosshair&lt;/name&gt;
+                    &lt;/loadImage&gt;
+                    &lt;loadFont&gt;
+                        &lt;fontFile&gt;src/main/splasher/FreeMono.ttf&lt;/fontFile&gt;
+                        &lt;name&gt;font1&lt;/name&gt;
+                    &lt;/loadFont&gt;
+                &lt;/resources&gt;
+        
+                &lt;outputImageFile&gt;image.png&lt;/outputImageFile&gt;
+        
+                &lt;canvas&gt;
+                    &lt;size&gt;640x480&lt;/size&gt;
+                    &lt;backgroundColor&gt;WHITE&lt;/backgroundColor&gt;
+                    &lt;draw&gt;
+                        &lt;drawImage&gt;
+                            &lt;imageName&gt;crosshair&lt;/imageName&gt;
+                            &lt;position&gt;center,center&lt;/position&gt;
+                        &lt;/drawImage&gt;
+                        &lt;drawText&gt;
+                            &lt;text&gt;--&amp;gt; Center &amp;lt;--&lt;/text&gt;
+                            &lt;textColor&gt;#000000&lt;/textColor&gt;
+                            &lt;fontAntialias&gt;HRGB&lt;/fontAntialias&gt;
+                            &lt;fontName&gt;font1&lt;/fontName&gt;
+                            &lt;fontSize&gt;48&lt;/fontSize&gt;
+                            &lt;position&gt;center,center&lt;/position&gt;
+                        &lt;/drawText&gt;
+                        &lt;drawText&gt;
+                            &lt;text&gt;:Top Left:&lt;/text&gt;
+                            &lt;textColor&gt;#000000&lt;/textColor&gt;
+                            &lt;fontName&gt;FreeMono&lt;/fontName&gt;
+                            &lt;fontSize&gt;48&lt;/fontSize&gt;
+                            &lt;position&gt;left,top&lt;/position&gt;
+                        &lt;/drawText&gt;
+                        &lt;drawText&gt;
+                            &lt;text&gt;:Bottom Right:&lt;/text&gt;
+                            &lt;textColor&gt;#000077&lt;/textColor&gt;
+                            &lt;fontName&gt;Serif&lt;/fontName&gt;
+                            &lt;fontStyle&gt;italic,bold&lt;/fontStyle&gt;
+                            &lt;fontSize&gt;32&lt;/fontSize&gt;
+                            &lt;position&gt;right,bottom&lt;/position&gt;
+                        &lt;/drawText&gt;
+                    &lt;/draw&gt;
+                &lt;/canvas&gt;
+            &lt;/configuration&gt;
+        &lt;/execution&gt;
+    &lt;/executions&gt;
+&lt;/plugin&gt;</td>
+<td valign="middle"><img src="sites/splasher-maven-plugin/images/usage-example1.png"/></td>
+                    </tr>
+                  </tbody>
+                </table>
+    </td>
+    </tr>
+              <tr>
+              <td>
               <h3>dependencypath-maven-plugin (avaliable from the Maven central repository)</h3>
               <p>Sets a property pointing to the artifact file for each selected project dependency. Each
                 property name will have a base name in form of <span
@@ -69,36 +150,39 @@
                   border="1" cellpadding="2" cellspacing="2">
                   <tbody>
                     <tr>
-                      <td style=" vertical-align: middle;">    &lt;plugin&gt;
-        &lt;groupId&gt;org.bitstrings.maven.plugins&lt;/groupId&gt;
-        &lt;artifactId&gt;dependencypath-maven-plugin&lt;/artifactId&gt;
-        &lt;executions&gt;
-            &lt;execution&gt;
-                &lt;id&gt;set-all&lt;/id&gt;
-                &lt;goals&gt;
-                    &lt;goal&gt;set&lt;/goal&gt;
-                &lt;/goals&gt;
-            &lt;/execution&gt;
-            &lt;execution&gt;
-                &lt;id&gt;set-relative-builddir&lt;/id&gt;
-                &lt;goals&gt;
-                    &lt;goal&gt;set&lt;/goal&gt;
-                &lt;/goals&gt;
-                &lt;configuration&gt;
-                    &lt;propertySets&gt;
-                        &lt;propertySet&gt;
-                            &lt;suffix&gt;builddir&lt;/suffix&gt;
-                            &lt;relativeTo&gt;${project.build.directory}&lt;/relativeTo&gt;
-                            &lt;transitive&gt;false&lt;/transitive&gt;
-                        &lt;/propertySet&gt;
-                    &lt;/propertySets&gt;
-                &lt;/configuration&gt;
-            &lt;/execution&gt;
-        &lt;/executions&gt;
-    &lt;/plugin&gt;</td>
+                      <td style=" vertical-align: middle;">&lt;plugin&gt;
+    &lt;groupId&gt;org.bitstrings.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;dependencypath-maven-plugin&lt;/artifactId&gt;
+    &lt;executions&gt;
+        &lt;execution&gt;
+            &lt;id&gt;set-all&lt;/id&gt;
+            &lt;goals&gt;
+                &lt;goal&gt;set&lt;/goal&gt;
+            &lt;/goals&gt;
+        &lt;/execution&gt;
+        &lt;execution&gt;
+            &lt;id&gt;set-relative-builddir&lt;/id&gt;
+            &lt;goals&gt;
+                &lt;goal&gt;set&lt;/goal&gt;
+            &lt;/goals&gt;
+            &lt;configuration&gt;
+                &lt;propertySets&gt;
+                    &lt;propertySet&gt;
+                        &lt;suffix&gt;builddir&lt;/suffix&gt;
+                        &lt;relativeTo&gt;${project.build.directory}&lt;/relativeTo&gt;
+                        &lt;transitive&gt;false&lt;/transitive&gt;
+                    &lt;/propertySet&gt;
+                &lt;/propertySets&gt;
+            &lt;/configuration&gt;
+        &lt;/execution&gt;
+    &lt;/executions&gt;
+&lt;/plugin&gt;</td>
                     </tr>
                   </tbody>
                 </table>
+    </td>
+    </tr>
+    </table>
               </div>
 <a name="m2eConnectors"><h1>M2E Connectors</h1></a>
               </h1>
