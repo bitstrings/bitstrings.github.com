@@ -5,6 +5,7 @@
 ### splasher-maven-plugin (avaliable from the Maven central repository) ###
 
 The splasher plugin can be used to compose a splash screen. It can complement an existing splash or create one from scratch.
+Basically you can create an image from a set of components.
 
 Documentation: http://bitstrings.github.com/sites/splasher-maven-plugin  
 github: https://github.com/bitstrings/splasher-maven-plugin  
