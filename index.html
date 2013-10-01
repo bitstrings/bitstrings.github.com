@@ -57,7 +57,7 @@
 This fork mainly exists to add missing features to the webstart goal of the org.codehaus.mojo:nbm-maven-plugin.<br></p>
               <p>
                 <span style="font-weight: bold;">github</span>: <a
-                  href="https://github.com/bitstrings/nbm-maven-plugin">https://github.com/bitstrings/nbm-maven-plugin</a><br><br><br><b>Quick example</b><br><br>The <i>set-all</i> execution will set a property for each dependency (including transitive) of the project which value is the absolute path of the artifact as resolved by Maven. Suppose you depend on junit then you will have access to ${junit:junit:jar} which is the absolute path to the junit jar artifact.<br><br>The <i>set-relative-builddir</i> will set a property for each dependency (except transitive) of the project which value is the relative path (relative to ${project.build.directory}) to the artifact as resolved by Maven. Suppose you depend on junit then you will have access to ${junit:junit:jar.relative.builddir} which is the relative path to the junit jar artifact. Notice that we explicitly added the <i>builddir</i> suffix, while the <i>relative</i> suffix is implicit.  </p>
+                  href="https://github.com/bitstrings/nbm-maven-plugin">https://github.com/bitstrings/nbm-maven-plugin</a><br><br><br><b>Quick example</b><br></p>
               <div id="code">
                 <table style=" text-align: left; width: 100%;"
                   border="1" cellpadding="2" cellspacing="2">
