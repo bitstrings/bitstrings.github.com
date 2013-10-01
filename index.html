@@ -50,6 +50,53 @@
             <td style=" vertical-align: top; padding-top: 15px; padding-bottom: 10px;">
               <a name="mavenPlugins"><h1>Maven Plugins</h1></a>
               <table border="0" cellpadding="0" cellspacing="0">
+              <tr><td>
+              <h3>nbm-maven-plugin (avaliable from the Maven central repository)</h3>
+              <p>Fork of the codehaus nbm-maven repository --> http://svn.codehaus.org/mojo/trunk/mojo/nbm-maven
+<br/><br/>
+This fork mainly exists to add missing features to the webstart goal of the org.codehaus.mojo:nbm-maven-plugin.<br></p>
+              <p>
+                <span style="font-weight: bold;">github</span>: <a
+                  href="https://github.com/bitstrings/nbm-maven-plugin">https://github.com/bitstrings/nbm-maven-plugin</a><br><br><br><b>Quick example</b><br><br>The <i>set-all</i> execution will set a property for each dependency (including transitive) of the project which value is the absolute path of the artifact as resolved by Maven. Suppose you depend on junit then you will have access to ${junit:junit:jar} which is the absolute path to the junit jar artifact.<br><br>The <i>set-relative-builddir</i> will set a property for each dependency (except transitive) of the project which value is the relative path (relative to ${project.build.directory}) to the artifact as resolved by Maven. Suppose you depend on junit then you will have access to ${junit:junit:jar.relative.builddir} which is the relative path to the junit jar artifact. Notice that we explicitly added the <i>builddir</i> suffix, while the <i>relative</i> suffix is implicit.  </p>
+              <div id="code">
+                <table style=" text-align: left; width: 100%;"
+                  border="1" cellpadding="2" cellspacing="2">
+                  <tbody>
+                    <tr>
+                      <td style=" vertical-align: middle;">&lt;plugin&gt;
+    &lt;groupId&gt;org.bitstrings.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;nbm-maven-plugin&lt;/artifactId&gt;
+    &lt;extensions&gt;true&lt;/extensions&gt;
+    &lt;executions&gt;
+        &lt;execution&gt;
+            &lt;goals&gt;
+                &lt;goal&gt;webstart-app&lt;/goal&gt;
+            &lt;/goals&gt;
+            &lt;configuration&gt;
+                &lt;masterJnlpFile&gt;src/main/webstart/${brandingToken}.jnlp&lt;/masterJnlpFile&gt;
+                &lt;masterJnlpFileName&gt;${brandingToken}&lt;/masterJnlpFileName&gt;
+                &lt;generateJnlpApplicationTemplate&gt;true&lt;/generateJnlpApplicationTemplate&gt;
+                &lt;additionalArguments&gt;-J-Xms384m -J-Xmx800m -J-XX:MaxPermSize=256m&lt;/additionalArguments&gt;
+                &lt;keystore&gt;${jarsigner.keystore}&lt;/keystore&gt;
+                &lt;keystorealias&gt;${jarsigner.alias}&lt;/keystorealias&gt;
+                &lt;keystorepassword&gt;${jarsigner.storepass}&lt;/keystorepassword&gt;
+                &lt;keystoretype&gt;${jarsigner.storetype}&lt;/keystoretype&gt;
+                &lt;signingRemoveExistingSignatures&gt;true&lt;/signingRemoveExistingSignatures&gt;
+                &lt;signingThreads&gt;8&lt;/signingThreads&gt;
+                &lt;webappResources&gt;
+                    &lt;webappResource&gt;
+                        &lt;directory&gt;src/main/resources&lt;/directory&gt;
+                    &lt;/webappResource&gt;
+                &lt;/webappResources&gt;
+            &lt;/configuration&gt;
+        &lt;/execution&gt;
+    &lt;/executions&gt;
+&lt;/plugin&gt;
+</td>
+                    </tr>
+                  </tbody>
+                </table>
+    </td></tr>
               <tr>
               <td>
               <h3>splasher-maven-plugin (avaliable from the Maven central repository)</h3>
@@ -83,9 +130,9 @@
                         &lt;name&gt;font1&lt;/name&gt;
                     &lt;/loadFont&gt;
                 &lt;/resources&gt;
-        
+
                 &lt;outputImageFile&gt;image.png&lt;/outputImageFile&gt;
-        
+
                 &lt;canvas&gt;
                     &lt;size&gt;640x480&lt;/size&gt;
                     &lt;backgroundColor&gt;WHITE&lt;/backgroundColor&gt;
