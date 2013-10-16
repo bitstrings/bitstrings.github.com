@@ -57,7 +57,11 @@
 This fork mainly exists to add missing features to the webstart goal of the org.codehaus.mojo:nbm-maven-plugin.<br></p>
               <p><span style="font-weight: bold;">Documentation</span>: <a href="https://github.com/bitstrings/nbm-maven/wiki">https://github.com/bitstrings/nbm-maven/wiki</a><br>
                 <span style="font-weight: bold;">github</span>: <a
-                  href="https://github.com/bitstrings/nbm-maven-plugin">https://github.com/bitstrings/nbm-maven-plugin</a><br><br><br><b>Quick example</b><br></p>
+                  href="https://github.com/bitstrings/nbm-maven-plugin">https://github.com/bitstrings/nbm-maven-plugin</a><br/><br/>
+                  <span style="font-weight: bold;">Latest Version</span>: <a href="http://search.maven.org/#artifactdetails|org.bitstrings.maven.plugins|nbm-maven-plugin|3.11.1|maven-plugin">3.11.1</a>
+                  <br><br><br>
+                  <b>Quick example</b><br></p>
+
               <div id="code">
                 <table style=" text-align: left; width: 100%;"
                   border="1" cellpadding="2" cellspacing="2">
@@ -92,6 +96,24 @@ This fork mainly exists to add missing features to the webstart goal of the org.
         &lt;/execution&gt;
     &lt;/executions&gt;
 &lt;/plugin&gt;
+</td>
+<td style="white-space: normal; border: none;">
+<h1><b>Added Features</b></h1>
+<h2>Webstart</h2>
+
+<ul>
+    <li>Multithreaded jar signing (nbm.signing.threads);</li>
+    <li>TSA signing - time based signing (nbm.signing.tsacert, nbm.signing.tsaurl, nbm.signing.retryCount);</li>
+    <li>Remove existing signatures (nbm.signing.removeExistingSignatures);</li>
+    <li>JNLP-INF/APPLICATION_TEMPLATE.JNLP support;</li>
+    <li>Support JAR manifest security attributes (Permissions, Codebase, etc...);</li>
+    <li>Support adding extra JAR manifest attributes;</li>
+    <li>Webapp resources;</li>
+    <li>Able to sign war archive;</li>
+    <li>Fix regression: As of Java 6 > release 31 (applies to Java 7), the JDK sample directory doesn't exist anymore. The nbm maven plugin uses the jnlp servlet of sample to bootstrap the application. It is hard coded. The servlet is now part of the plugin;</li>
+    <li>Support for m2e lifecycle mapping;</li>
+    <li>More robust jar signing to fix edge cases.</li>
+</ul>
 </td>
                     </tr>
                   </tbody>
