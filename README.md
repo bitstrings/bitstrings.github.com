@@ -8,9 +8,8 @@ Fork of the codehaus nbm-maven repository --> http://svn.codehaus.org/mojo/trunk
 
 This fork mainly exists to add missing features to the webstart goal of the org.codehaus.mojo:nbm-maven-plugin.
 
-**Home**: http://bitstrings.org
-
-**GitHub**: https://github.com/bitstrings/nbm-maven
+**Home**: http://bitstrings.org  
+**GitHub**: https://github.com/bitstrings/nbm-maven  
 
 
 ### splasher-maven-plugin (available from the Maven central repository) ###
@@ -18,10 +17,8 @@ This fork mainly exists to add missing features to the webstart goal of the org.
 The splasher plugin can be used to compose a splash screen. It can complement an existing splash or create one from scratch.
 Basically you can create an image from a set of components.
 
-**Home**: http://bitstrings.org
-
+**Home**: http://bitstrings.org  
 **Documentation**: http://bitstrings.github.com/sites/splasher-maven-plugin  
-
 **GitHub**: https://github.com/bitstrings/splasher-maven-plugin  
 
 
@@ -29,10 +26,8 @@ Basically you can create an image from a set of components.
 
 Sets a property pointing to the artifact file for each selected project dependency. Each property name will have a base name in form of groupId:artifactId:type:[classifier][.relative][.suffix]. This is similar to the dependency:properties goal but with additional features, like setting a relative path and filtering.
 
-**Home**: http://bitstrings.org
-
+**Home**: http://bitstrings.org  
 **Documentation**: http://bitstrings.github.com/sites/dependencypath-maven-plugin  
-
 **GitHub**: https://github.com/bitstrings/dependencypath-maven-plugin  
 
 -
