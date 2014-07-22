@@ -9,6 +9,7 @@ Fork of the codehaus nbm-maven repository --> http://svn.codehaus.org/mojo/trunk
 This fork mainly exists to add missing features to the webstart goal of the org.codehaus.mojo:nbm-maven-plugin.
 
 **Home**: http://bitstrings.org  
+**Documentation**: https://github.com/bitstrings/nbm-maven/wiki  
 **GitHub**: https://github.com/bitstrings/nbm-maven  
 
 
