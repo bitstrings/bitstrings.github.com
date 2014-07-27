@@ -113,22 +113,22 @@ This fork mainly exists to add missing features to the webstart goal of the org.
 &lt;/plugin&gt;
 </td>
 <td style="white-space: normal; border: none;">
-<h1><b>Added Features</b></h1>
-<h2><b>Webstart</b></h2>
+<h1>Added Features</h1>
+<h2>Webstart</h2>
 
 <ul>
-    </b><li><b>Multithreaded jar signing (nbm.signing.threads);</b></li><b>
-    </b><li><b>TSA signing - time based signing (nbm.signing.tsacert, nbm.signing.tsaurl, nbm.signing.retryCount);</b></li><b>
-    </b><li><b>Remove existing signatures (nbm.signing.removeExistingSignatures);</b></li><b>
-    </b><li><b>JNLP-INF/APPLICATION_TEMPLATE.JNLP support;</b></li><b>
-    </b><li><b>Support JAR manifest security attributes (Permissions, Codebase, etc...);</b></li><b>
-    </b><li><b>Support adding extra JAR manifest attributes;</b></li><b>
-    </b><li><b>Webapp resources;</b></li><b>
-    </b><li><b>Able to sign war archive;</b></li><b>
-    </b><li><b>Fix regression: As of Java 6 > release 31 (applies to Java 7), the JDK sample directory doesn't exist anymore. The nbm maven plugin uses the jnlp servlet of sample to bootstrap the application. It is hard coded. The servlet is now part of the plugin;</b></li><b>
-    </b><li><b>Support for m2e lifecycle mapping;</b></li><b>
-    </b><li><b>More robust jar signing to fix edge cases;</b></li><b>
-    </b><li><b>Pack200.</b></li><b>
+    <li>Multithreaded jar signing (nbm.signing.threads);</li>
+    <li>TSA signing - time based signing (nbm.signing.tsacert, nbm.signing.tsaurl, nbm.signing.retryCount);</li>
+    <li>Remove existing signatures (nbm.signing.removeExistingSignatures);</li>
+    <li>JNLP-INF/APPLICATION_TEMPLATE.JNLP support;</li>
+    <li>Support JAR manifest security attributes (Permissions, Codebase, etc...);</li>
+    <li>Support adding extra JAR manifest attributes;</li>
+    <li>Webapp resources;</li>
+    <li>Able to sign war archive;</li>
+    <li>Fix regression: As of Java 6 > release 31 (applies to Java 7), the JDK sample directory doesn't exist anymore. The nbm maven plugin uses the jnlp servlet of sample to bootstrap the application. It is hard coded. The servlet is now part of the plugin;</li>
+    <li>Support for m2e lifecycle mapping;</li>
+    <li>More robust jar signing to fix edge cases;</li>
+    <li>Pack200.</li>
 </ul>
 </td>
                     </tr>
@@ -141,13 +141,13 @@ This fork mainly exists to add missing features to the webstart goal of the org.
               <p>The splasher plugin can be used to compose a splash screen. It can complement an existing splash or create one from scratch.</b><b><br></b><b>Basically you can create (generate) an image from a set of components.<br></p>
               <p><span style="font-weight: bold;"><b>Documentation</b></span><b>: </b><a href="sites/splasher-maven-plugin/index.html"><b>http://bitstrings.github.com/sites/splasher-maven-plugin</b></a><br>
                 <span style="font-weight: bold;"><b>github</b></span><b>: </b><a
-                  href="https://github.com/bitstrings/splasher-maven-plugin"><b>https://github.com/bitstrings/splasher-maven-plugin</b></a><b><br></b><b><br></b><b><br></b><b>Quick example</b><b><br></b></p><b>
-              </b><div id="code"><b>
-                </b><table style=" text-align: left; width: 100%;"
-                  border="1" cellpadding="2" cellspacing="2"><b>
-                  </b><tbody><b>
-                    </b><tr><b>
-                      </b><td style=" vertical-align: middle;">&lt;plugin&gt;
+                  href="https://github.com/bitstrings/splasher-maven-plugin"><b>https://github.com/bitstrings/splasher-maven-plugin</b></a><b><br></b><b><br></b><b><br></b><b>Quick example</b><br></p>
+              <div id="code">
+                <table style=" text-align: left; width: 100%;"
+                  border="1" cellpadding="2" cellspacing="2">
+                  <tbody>
+                    <tr>
+                      <td style=" vertical-align: middle;">&lt;plugin&gt;
     &lt;groupId&gt;org.bitstrings.maven.plugins&lt;/groupId&gt;
     &lt;artifactId&gt;splasher-maven-plugin&lt;/artifactId&gt;
     &lt;executions&gt;
@@ -219,8 +219,8 @@ This fork mainly exists to add missing features to the webstart goal of the org.
               <h3><b>dependencypath-maven-plugin (available from the Maven central repository)</b></h3><b>
               </b><p>Sets a property pointing to the artifact file for each selected project dependency. Each
                 property name will have a base name in form of <span
-                  style="font-style: italic;"><b>groupId:artifactId:type:[classifier][.relative][.suffix]</b></span><b>. This is similar to the </b><i><b>dependency:properties</b></i><b> goal but with additional features, like setting a relative path and filtering.</b><b><br></b></p><b>
-              </b><p><b> </b><span style="font-weight: bold;"><b>Documentation</b></span><b>: </b><a href="sites/dependencypath-maven-plugin/index.html"><b>http://bitstrings.github.com/sites/dependencypath-maven-plugin</b></a><b><br></b><b>
+                  style="font-style: italic;"><b>groupId:artifactId:type:[classifier][.relative][.suffix]</b></span>. This is similar to the <i>dependency:properties</i> goal but with additional features, like setting a relative path and filtering.<br></p>
+              <p><span style="font-weight: bold;"><b>Documentation</b></span><b>: </b><a href="sites/dependencypath-maven-plugin/index.html"><b>http://bitstrings.github.com/sites/dependencypath-maven-plugin</b></a><b><br></b><b>
                 </b><span style="font-weight: bold;"><b>github</b></span><b>: </b><a
                   href="https://github.com/bitstrings/dependencypath-maven-plugin"><b>https://github.com/bitstrings/dependencypath-maven-plugin</b></a><b><br></b><b><br></b><b><br></b><b>Quick example</b><b><br></b><b><br></b><b>The </b><i><b>set-all</b></i><b> execution will set a property for each dependency (including transitive) of the project which value is the absolute path of the artifact as resolved by Maven. Suppose you depend on junit then you will have access to ${junit:junit:jar} which is the absolute path to the junit jar artifact.</b><b><br></b><b><br></b><b>The </b><i><b>set-relative-builddir</b></i><b> will set a property for each dependency (except transitive) of the project which value is the relative path (relative to ${project.build.directory}) to the artifact as resolved by Maven. Suppose you depend on junit then you will have access to ${junit:junit:jar.relative.builddir} which is the relative path to the junit jar artifact. Notice that we explicitly added the </b><i><b>builddir</b></i><b> suffix, while the </b><i><b>relative</b></i><b> suffix is implicit.  </b></p><b>
               </b><div id="code"><b>
@@ -298,16 +298,16 @@ This fork mainly exists to add missing features to the webstart goal of the org.
               </b><p><span style="font-weight: bold;"><b>Plugin</b></span><b>:
                 org.codehaus.mojo:xmlbeans-maven-plugin</b><b><br></b><b>
                 </b><small><span style="font-weight: bold;"><b>Home</b></span><b>: </b><a
-href="http://mojo.codehaus.org/xmlbeans-maven-plugin"><b>http://mojo.codehaus.org/xmlbeans-maven-plugin</b></a></small><b><br></b><b>
-              </b></p><b>
-              </b><b><br></b><b>
-            </b></td><b>
-          </b></tr><b>
-        </b></tbody><b>
-      </b></table><b>
-    </b></div><b>
-    </b><b><br></b><b>
-    </b><p>Copyright &copy; 2014 bitstrings.org - Pino Silvaggio - Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br></p>
+href="http://mojo.codehaus.org/xmlbeans-maven-plugin"><b>http://mojo.codehaus.org/xmlbeans-maven-plugin</b></a></small><br>
+              </p>
+              <br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br>
+    <p>Copyright &copy; 2014 bitstrings.org - Pino Silvaggio - Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br></p>
     <br>
   </body>
 </html>
