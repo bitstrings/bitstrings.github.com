@@ -75,15 +75,14 @@ This fork mainly exists to add missing features to the webstart goal of the org.
     <span style="font-weight: bold;"><b>Alternate Maven Repository</b></span><b>: </b><a href="https://github.com/bitstrings/m2-repository/raw/master/releases"><b>https://github.com/bitstrings/m2-repository/raw/master/releases</b></a><br/>
     <br/>
     <span style="font-weight: bold;"><b>Latest Version</b></span><b>: </b><a href="https://github.com/bitstrings/m2-repository/raw/master/releases"><b>3.13.2-bitstrings-1</b></a>
-<br/><br/><br/></b>
-                  <b>Quick example</b><b><br></b></p><b>
-
-              </b><div id="code"><b>
-                </b><table style=" text-align: left; width: 100%;"
-                  border="1" cellpadding="2" cellspacing="2"><b>
-                  </b><tbody><b>
-                    </b><tr><b>
-                      </b><td style=" vertical-align: middle;"><b>&lt;plugin&gt;
+<br/><br/><br/>
+                  <b>Quick example</b><b><br></b></p>
+              <div id="code">
+              <table style=" text-align: left; width: 100%;"
+                  border="1" cellpadding="2" cellspacing="2">
+                  <tbody>
+                    <tr>
+                      <td style=" vertical-align: middle;">&lt;plugin&gt;
     &lt;groupId&gt;org.bitstrings.maven.plugins&lt;/groupId&gt;
     &lt;artifactId&gt;nbm-maven-plugin&lt;/artifactId&gt;
     &lt;extensions&gt;true&lt;/extensions&gt;
@@ -112,12 +111,12 @@ This fork mainly exists to add missing features to the webstart goal of the org.
         &lt;/execution&gt;
     &lt;/executions&gt;
 &lt;/plugin&gt;
-</b></td><b>
-</b><td style="white-space: normal; border: none;"><b>
-</b><h1><b>Added Features</b></h1><b>
-</b><h2><b>Webstart</b></h2><b>
+</td>
+<td style="white-space: normal; border: none;">
+<h1><b>Added Features</b></h1>
+<h2><b>Webstart</b></h2>
 
-</b><ul><b>
+<ul>
     </b><li><b>Multithreaded jar signing (nbm.signing.threads);</b></li><b>
     </b><li><b>TSA signing - time based signing (nbm.signing.tsacert, nbm.signing.tsaurl, nbm.signing.retryCount);</b></li><b>
     </b><li><b>Remove existing signatures (nbm.signing.removeExistingSignatures);</b></li><b>
@@ -130,25 +129,25 @@ This fork mainly exists to add missing features to the webstart goal of the org.
     </b><li><b>Support for m2e lifecycle mapping;</b></li><b>
     </b><li><b>More robust jar signing to fix edge cases;</b></li><b>
     </b><li><b>Pack200.</b></li><b>
-</b></ul><b>
-</b></td><b>
-                    </b></tr><b>
-                  </b></tbody><b>
-                </b></table><b>
-    </b></td></tr><b>
-              </b><tr><b>
-              </b><td><b>
-              </b><h3><b>splasher-maven-plugin (available from the Maven central repository)</b></h3><b>
-              </b><p><b>The splasher plugin can be used to compose a splash screen. It can complement an existing splash or create one from scratch.</b><b><br></b><b>Basically you can create (generate) an image from a set of components.</b><b><br></b></p><b>
-              </b><p><b> </b><span style="font-weight: bold;"><b>Documentation</b></span><b>: </b><a href="sites/splasher-maven-plugin/index.html"><b>http://bitstrings.github.com/sites/splasher-maven-plugin</b></a><b><br></b><b>
-                </b><span style="font-weight: bold;"><b>github</b></span><b>: </b><a
+</ul>
+</td>
+                    </tr>
+                  </tbody>
+                </table>
+    </td></tr>
+              <tr>
+              <td>
+              <h3><b>splasher-maven-plugin (available from the Maven central repository)</b></h3>
+              <p>The splasher plugin can be used to compose a splash screen. It can complement an existing splash or create one from scratch.</b><b><br></b><b>Basically you can create (generate) an image from a set of components.<br></p>
+              <p><span style="font-weight: bold;"><b>Documentation</b></span><b>: </b><a href="sites/splasher-maven-plugin/index.html"><b>http://bitstrings.github.com/sites/splasher-maven-plugin</b></a><br>
+                <span style="font-weight: bold;"><b>github</b></span><b>: </b><a
                   href="https://github.com/bitstrings/splasher-maven-plugin"><b>https://github.com/bitstrings/splasher-maven-plugin</b></a><b><br></b><b><br></b><b><br></b><b>Quick example</b><b><br></b></p><b>
               </b><div id="code"><b>
                 </b><table style=" text-align: left; width: 100%;"
                   border="1" cellpadding="2" cellspacing="2"><b>
                   </b><tbody><b>
                     </b><tr><b>
-                      </b><td style=" vertical-align: middle;"><b>&lt;plugin&gt;
+                      </b><td style=" vertical-align: middle;">&lt;plugin&gt;
     &lt;groupId&gt;org.bitstrings.maven.plugins&lt;/groupId&gt;
     &lt;artifactId&gt;splasher-maven-plugin&lt;/artifactId&gt;
     &lt;executions&gt;
@@ -208,18 +207,18 @@ This fork mainly exists to add missing features to the webstart goal of the org.
             &lt;/configuration&gt;
         &lt;/execution&gt;
     &lt;/executions&gt;
-&lt;/plugin&gt;</b></td><b>
-</b><td style="border: none; padding: 0px 0px 0px 0px;" align="center" valign="middle"><b><img src="sites/splasher-maven-plugin/images/usage-example1.png"></b></td><b>
+&lt;/plugin&gt;</td>
+<td style="border: none; padding: 0px 0px 0px 0px;" align="center" valign="middle"><b><img src="sites/splasher-maven-plugin/images/usage-example1.png"></b></td><b>
                     </b></tr><b>
-                  </b></tbody><b>
-                </b></table><b>
-    </b></td><b>
-    </b></tr><b>
-              </b><tr><b>
-              </b><td><b>
-              </b><h3><b>dependencypath-maven-plugin (available from the Maven central repository)</b></h3><b>
-              </b><p><b>Sets a property pointing to the artifact file for each selected project dependency. Each
-                property name will have a base name in form of </b><span
+                  </b></tbody>
+                </table>
+    </td>
+    </tr>
+              <tr>
+              <td>
+              <h3><b>dependencypath-maven-plugin (available from the Maven central repository)</b></h3><b>
+              </b><p>Sets a property pointing to the artifact file for each selected project dependency. Each
+                property name will have a base name in form of <span
                   style="font-style: italic;"><b>groupId:artifactId:type:[classifier][.relative][.suffix]</b></span><b>. This is similar to the </b><i><b>dependency:properties</b></i><b> goal but with additional features, like setting a relative path and filtering.</b><b><br></b></p><b>
               </b><p><b> </b><span style="font-weight: bold;"><b>Documentation</b></span><b>: </b><a href="sites/dependencypath-maven-plugin/index.html"><b>http://bitstrings.github.com/sites/dependencypath-maven-plugin</b></a><b><br></b><b>
                 </b><span style="font-weight: bold;"><b>github</b></span><b>: </b><a
@@ -229,7 +228,7 @@ This fork mainly exists to add missing features to the webstart goal of the org.
                   border="1" cellpadding="2" cellspacing="2"><b>
                   </b><tbody><b>
                     </b><tr><b>
-                      </b><td style=" vertical-align: middle;"><b>&lt;plugin&gt;
+                      </b><td style=" vertical-align: middle;">&lt;plugin&gt;
     &lt;groupId&gt;org.bitstrings.maven.plugins&lt;/groupId&gt;
     &lt;artifactId&gt;dependencypath-maven-plugin&lt;/artifactId&gt;
     &lt;executions&gt;
@@ -255,15 +254,15 @@ This fork mainly exists to add missing features to the webstart goal of the org.
             &lt;/configuration&gt;
         &lt;/execution&gt;
     &lt;/executions&gt;
-&lt;/plugin&gt;</b></td><b>
-                    </b></tr><b>
-                  </b></tbody><b>
-                </b></table><b>
-    </b></td><b>
-    </b></tr><b>
-    </b></table><b>
-              </b><b><div></div></b><b>
-</b><a name="m2eConnectors"><h1><b>M2E Connectors</b></h1></a><b>
+&lt;/plugin&gt;</td>
+                    </tr>
+                  </tbody>
+                </table>
+    </td>
+    </tr>
+    </table>
+              <div></div>
+<a name="m2eConnectors"><h1><b>M2E Connectors</b></h1></a><b>
               </b><b><h1></h1></b><b>
               </b><p><span style="font-weight: bold;"><b>github</b></span><b>: </b><a
                   href="https://github.com/bitstrings/m2e-connectors"><b>https://github.com/bitstrings/m2e-connectors</b></a><b><br></b><b>
@@ -308,8 +307,7 @@ href="http://mojo.codehaus.org/xmlbeans-maven-plugin"><b>http://mojo.codehaus.or
       </b></table><b>
     </b></div><b>
     </b><b><br></b><b>
-    </b><p><b>Copyright &copy; 2014 bitstrings.org - Pino Silvaggio - Licensed under the </b><a href="http://www.apache.org/licenses/LICENSE-2.0"><b>Apache License, Version 2.0</b></a><b>.</b><b><br></b></p><b>
-    </b><b><br></b><b>
-  </b></body><b>
-</b></html><b>
-</b>
+    </b><p>Copyright &copy; 2014 bitstrings.org - Pino Silvaggio - Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br></p>
+    <br>
+  </body>
+</html>
