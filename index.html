@@ -54,20 +54,36 @@
               <h3>nbm-maven-plugin (available from the Maven central repository)</h3>
               <p>Fork of the codehaus nbm-maven repository --> <a href="http://svn.codehaus.org/mojo/trunk/mojo/nbm-maven">http://svn.codehaus.org/mojo/trunk/mojo/nbm-maven</a>
 <br/><br/>
-This fork mainly exists to add missing features to the webstart goal of the org.codehaus.mojo:nbm-maven-plugin.<br></p>
-              <p><span style="font-weight: bold;">Documentation</span>: <a href="https://github.com/bitstrings/nbm-maven/wiki">https://github.com/bitstrings/nbm-maven/wiki</a><br>
-                <span style="font-weight: bold;">github</span>: <a
-                  href="https://github.com/bitstrings/nbm-maven-plugin">https://github.com/bitstrings/nbm-maven-plugin</a><br/><br/>
-                  <span style="font-weight: bold;">Latest Version</span>: <a href="http://search.maven.org/#artifactdetails|org.bitstrings.maven.plugins|nbm-maven-plugin|3.11.1-3|maven-plugin">3.11.1-3</a>
-                  <br><br><br>
-                  <b>Quick example</b><br></p>
+This fork mainly exists to add missing features to the webstart goal of the org.codehaus.mojo:nbm-maven-plugin.<br/><br/><br/>
+    <span style="font-weight: bold;"><b>Documentation</b></span><b>: </b><a href="https://github.com/bitstrings/nbm-maven/wiki"><b>https://github.com/bitstrings/nbm-maven/wiki</b></a><br><b>
+                </b><span style="font-weight: bold;"><b>github</b></span><b>: </b><a
+                  href="https://github.com/bitstrings/nbm-maven-plugin"><b>https://github.com/bitstrings/nbm-maven-plugin</b></a><b><br></b><b><br></b><b>
+                  </b><span style="font-weight: bold;"><b>Latest Version</b></span><b>: </b><a href="http://search.maven.org/#artifactdetails|org.bitstrings.maven.plugins|nbm-maven-plugin|3.11.1-3|maven-plugin"><b>3.13.2</b></a><b><br>
+                  </b><span style="font-weight: bold;"><br><br><br>
+<table style="border: 0px; " width="75%">
+    <tr bgcolor="#FFFF00">
+        <th style="font-weight: bold; font-size: 110%; text-align: center;">!!! ATTENTION !!!<br>NETBEANS USERS</th>
+    </tr>
+    <tr bgcolor="#FFFFD0">
+        <td>You should not use:<br><pre><br>&lt;groupId&gt;<b>org.bitstrings.maven.plugins</b>&lt;/groupId&gt;<br>&lt;artifactId&gt;<b>nbm-maven-plugin</b>&lt;/artifactId&gt;<br></pre><br>but use:<br><pre><br>&lt;groupId&gt;<b>org.codehaus.mojo</b>&lt;/groupId&gt;<br>&lt;artifactId&gt;<b>nbm-maven-plugin</b>&lt;/artifactId&gt;<br>&lt;version&gt;<b>3.13.2-bitstrings-1</b>&lt;/version&gt;<pre></td>
+    </tr>
+    <tr bgcolor="#FFFF90">
+        <td>Because the NetBeans IDE explicitly interacts with this plugin, it is in fact hardcoded. Use the alternate maven repository, see below.</td>
+    </tr>
+    </table><br><br><p>
+    <span style="font-weight: bold;"><b>github (alternative -> codehaus groupId)</b></span><b>: </b><a href="https://github.com/bitstrings/nbm-maven/tree/master-codehaus"><b>https://github.com/bitstrings/nbm-maven/tree/master-codehaus</b></a><br/><br/>
+    <span style="font-weight: bold;"><b>Alternate Maven Repository</b></span><b>: </b><a href="https://github.com/bitstrings/m2-repository/raw/master/releases"><b>https://github.com/bitstrings/m2-repository/raw/master/releases</b></a><br/>
+    <br/>
+    <span style="font-weight: bold;"><b>Latest Version</b></span><b>: </b><a href="https://github.com/bitstrings/m2-repository/raw/master/releases"><b>3.13.2-bitstrings-1</b></a>
+<br/><br/><br/>
+                  <b>Quick example</b><b><br></b></p><b>
 
-              <div id="code">
-                <table style=" text-align: left; width: 100%;"
-                  border="1" cellpadding="2" cellspacing="2">
-                  <tbody>
-                    <tr>
-                      <td style=" vertical-align: middle;">&lt;plugin&gt;
+              </b><div id="code"><b>
+                </b><table style=" text-align: left; width: 100%;"
+                  border="1" cellpadding="2" cellspacing="2"><b>
+                  </b><tbody><b>
+                    </b><tr><b>
+                      </b><td style=" vertical-align: middle;"><b>&lt;plugin&gt;
     &lt;groupId&gt;org.bitstrings.maven.plugins&lt;/groupId&gt;
     &lt;artifactId&gt;nbm-maven-plugin&lt;/artifactId&gt;
     &lt;extensions&gt;true&lt;/extensions&gt;
@@ -96,43 +112,43 @@ This fork mainly exists to add missing features to the webstart goal of the org.
         &lt;/execution&gt;
     &lt;/executions&gt;
 &lt;/plugin&gt;
-</td>
-<td style="white-space: normal; border: none;">
-<h1><b>Added Features</b></h1>
-<h2>Webstart</h2>
+</b></td><b>
+</b><td style="white-space: normal; border: none;"><b>
+</b><h1><b>Added Features</b></h1><b>
+</b><h2><b>Webstart</b></h2><b>
 
-<ul>
-    <li>Multithreaded jar signing (nbm.signing.threads);</li>
-    <li>TSA signing - time based signing (nbm.signing.tsacert, nbm.signing.tsaurl, nbm.signing.retryCount);</li>
-    <li>Remove existing signatures (nbm.signing.removeExistingSignatures);</li>
-    <li>JNLP-INF/APPLICATION_TEMPLATE.JNLP support;</li>
-    <li>Support JAR manifest security attributes (Permissions, Codebase, etc...);</li>
-    <li>Support adding extra JAR manifest attributes;</li>
-    <li>Webapp resources;</li>
-    <li>Able to sign war archive;</li>
-    <li>Fix regression: As of Java 6 > release 31 (applies to Java 7), the JDK sample directory doesn't exist anymore. The nbm maven plugin uses the jnlp servlet of sample to bootstrap the application. It is hard coded. The servlet is now part of the plugin;</li>
-    <li>Support for m2e lifecycle mapping;</li>
-    <li>More robust jar signing to fix edge cases;</li>
-    <li>Pack200.</li>
-</ul>
-</td>
-                    </tr>
-                  </tbody>
-                </table>
-    </td></tr>
-              <tr>
-              <td>
-              <h3>splasher-maven-plugin (available from the Maven central repository)</h3>
-              <p>The splasher plugin can be used to compose a splash screen. It can complement an existing splash or create one from scratch.<br>Basically you can create (generate) an image from a set of components.<br></p>
-              <p> <span style="font-weight: bold;">Documentation</span>: <a href="sites/splasher-maven-plugin/index.html">http://bitstrings.github.com/sites/splasher-maven-plugin</a><br>
-                <span style="font-weight: bold;">github</span>: <a
-                  href="https://github.com/bitstrings/splasher-maven-plugin">https://github.com/bitstrings/splasher-maven-plugin</a><br><br><br><b>Quick example</b><br></p>
-              <div id="code">
-                <table style=" text-align: left; width: 100%;"
-                  border="1" cellpadding="2" cellspacing="2">
-                  <tbody>
-                    <tr>
-                      <td style=" vertical-align: middle;">&lt;plugin&gt;
+</b><ul><b>
+    </b><li><b>Multithreaded jar signing (nbm.signing.threads);</b></li><b>
+    </b><li><b>TSA signing - time based signing (nbm.signing.tsacert, nbm.signing.tsaurl, nbm.signing.retryCount);</b></li><b>
+    </b><li><b>Remove existing signatures (nbm.signing.removeExistingSignatures);</b></li><b>
+    </b><li><b>JNLP-INF/APPLICATION_TEMPLATE.JNLP support;</b></li><b>
+    </b><li><b>Support JAR manifest security attributes (Permissions, Codebase, etc...);</b></li><b>
+    </b><li><b>Support adding extra JAR manifest attributes;</b></li><b>
+    </b><li><b>Webapp resources;</b></li><b>
+    </b><li><b>Able to sign war archive;</b></li><b>
+    </b><li><b>Fix regression: As of Java 6 > release 31 (applies to Java 7), the JDK sample directory doesn't exist anymore. The nbm maven plugin uses the jnlp servlet of sample to bootstrap the application. It is hard coded. The servlet is now part of the plugin;</b></li><b>
+    </b><li><b>Support for m2e lifecycle mapping;</b></li><b>
+    </b><li><b>More robust jar signing to fix edge cases;</b></li><b>
+    </b><li><b>Pack200.</b></li><b>
+</b></ul><b>
+</b></td><b>
+                    </b></tr><b>
+                  </b></tbody><b>
+                </b></table><b>
+    </b></td></tr><b>
+              </b><tr><b>
+              </b><td><b>
+              </b><h3><b>splasher-maven-plugin (available from the Maven central repository)</b></h3><b>
+              </b><p><b>The splasher plugin can be used to compose a splash screen. It can complement an existing splash or create one from scratch.</b><b><br></b><b>Basically you can create (generate) an image from a set of components.</b><b><br></b></p><b>
+              </b><p><b> </b><span style="font-weight: bold;"><b>Documentation</b></span><b>: </b><a href="sites/splasher-maven-plugin/index.html"><b>http://bitstrings.github.com/sites/splasher-maven-plugin</b></a><b><br></b><b>
+                </b><span style="font-weight: bold;"><b>github</b></span><b>: </b><a
+                  href="https://github.com/bitstrings/splasher-maven-plugin"><b>https://github.com/bitstrings/splasher-maven-plugin</b></a><b><br></b><b><br></b><b><br></b><b>Quick example</b><b><br></b></p><b>
+              </b><div id="code"><b>
+                </b><table style=" text-align: left; width: 100%;"
+                  border="1" cellpadding="2" cellspacing="2"><b>
+                  </b><tbody><b>
+                    </b><tr><b>
+                      </b><td style=" vertical-align: middle;"><b>&lt;plugin&gt;
     &lt;groupId&gt;org.bitstrings.maven.plugins&lt;/groupId&gt;
     &lt;artifactId&gt;splasher-maven-plugin&lt;/artifactId&gt;
     &lt;executions&gt;
@@ -192,28 +208,28 @@ This fork mainly exists to add missing features to the webstart goal of the org.
             &lt;/configuration&gt;
         &lt;/execution&gt;
     &lt;/executions&gt;
-&lt;/plugin&gt;</td>
-<td style="border: none; padding: 0px 0px 0px 0px;" align="center" valign="middle"><img src="sites/splasher-maven-plugin/images/usage-example1.png"/></td>
-                    </tr>
-                  </tbody>
-                </table>
-    </td>
-    </tr>
-              <tr>
-              <td>
-              <h3>dependencypath-maven-plugin (available from the Maven central repository)</h3>
-              <p>Sets a property pointing to the artifact file for each selected project dependency. Each
-                property name will have a base name in form of <span
-                  style="font-style: italic;">groupId:artifactId:type:[classifier][.relative][.suffix]</span>. This is similar to the <i>dependency:properties</i> goal but with additional features, like setting a relative path and filtering.<br></p>
-              <p> <span style="font-weight: bold;">Documentation</span>: <a href="sites/dependencypath-maven-plugin/index.html">http://bitstrings.github.com/sites/dependencypath-maven-plugin</a><br>
-                <span style="font-weight: bold;">github</span>: <a
-                  href="https://github.com/bitstrings/dependencypath-maven-plugin">https://github.com/bitstrings/dependencypath-maven-plugin</a><br><br><br><b>Quick example</b><br><br>The <i>set-all</i> execution will set a property for each dependency (including transitive) of the project which value is the absolute path of the artifact as resolved by Maven. Suppose you depend on junit then you will have access to ${junit:junit:jar} which is the absolute path to the junit jar artifact.<br><br>The <i>set-relative-builddir</i> will set a property for each dependency (except transitive) of the project which value is the relative path (relative to ${project.build.directory}) to the artifact as resolved by Maven. Suppose you depend on junit then you will have access to ${junit:junit:jar.relative.builddir} which is the relative path to the junit jar artifact. Notice that we explicitly added the <i>builddir</i> suffix, while the <i>relative</i> suffix is implicit.  </p>
-              <div id="code">
-                <table style=" text-align: left; width: 100%;"
-                  border="1" cellpadding="2" cellspacing="2">
-                  <tbody>
-                    <tr>
-                      <td style=" vertical-align: middle;">&lt;plugin&gt;
+&lt;/plugin&gt;</b></td><b>
+</b><td style="border: none; padding: 0px 0px 0px 0px;" align="center" valign="middle"><b><img src="sites/splasher-maven-plugin/images/usage-example1.png"></b></td><b>
+                    </b></tr><b>
+                  </b></tbody><b>
+                </b></table><b>
+    </b></td><b>
+    </b></tr><b>
+              </b><tr><b>
+              </b><td><b>
+              </b><h3><b>dependencypath-maven-plugin (available from the Maven central repository)</b></h3><b>
+              </b><p><b>Sets a property pointing to the artifact file for each selected project dependency. Each
+                property name will have a base name in form of </b><span
+                  style="font-style: italic;"><b>groupId:artifactId:type:[classifier][.relative][.suffix]</b></span><b>. This is similar to the </b><i><b>dependency:properties</b></i><b> goal but with additional features, like setting a relative path and filtering.</b><b><br></b></p><b>
+              </b><p><b> </b><span style="font-weight: bold;"><b>Documentation</b></span><b>: </b><a href="sites/dependencypath-maven-plugin/index.html"><b>http://bitstrings.github.com/sites/dependencypath-maven-plugin</b></a><b><br></b><b>
+                </b><span style="font-weight: bold;"><b>github</b></span><b>: </b><a
+                  href="https://github.com/bitstrings/dependencypath-maven-plugin"><b>https://github.com/bitstrings/dependencypath-maven-plugin</b></a><b><br></b><b><br></b><b><br></b><b>Quick example</b><b><br></b><b><br></b><b>The </b><i><b>set-all</b></i><b> execution will set a property for each dependency (including transitive) of the project which value is the absolute path of the artifact as resolved by Maven. Suppose you depend on junit then you will have access to ${junit:junit:jar} which is the absolute path to the junit jar artifact.</b><b><br></b><b><br></b><b>The </b><i><b>set-relative-builddir</b></i><b> will set a property for each dependency (except transitive) of the project which value is the relative path (relative to ${project.build.directory}) to the artifact as resolved by Maven. Suppose you depend on junit then you will have access to ${junit:junit:jar.relative.builddir} which is the relative path to the junit jar artifact. Notice that we explicitly added the </b><i><b>builddir</b></i><b> suffix, while the </b><i><b>relative</b></i><b> suffix is implicit.  </b></p><b>
+              </b><div id="code"><b>
+                </b><table style=" text-align: left; width: 100%;"
+                  border="1" cellpadding="2" cellspacing="2"><b>
+                  </b><tbody><b>
+                    </b><tr><b>
+                      </b><td style=" vertical-align: middle;"><b>&lt;plugin&gt;
     &lt;groupId&gt;org.bitstrings.maven.plugins&lt;/groupId&gt;
     &lt;artifactId&gt;dependencypath-maven-plugin&lt;/artifactId&gt;
     &lt;executions&gt;
@@ -239,60 +255,61 @@ This fork mainly exists to add missing features to the webstart goal of the org.
             &lt;/configuration&gt;
         &lt;/execution&gt;
     &lt;/executions&gt;
-&lt;/plugin&gt;</td>
-                    </tr>
-                  </tbody>
-                </table>
-    </td>
-    </tr>
-    </table>
-              </div>
-<a name="m2eConnectors"><h1>M2E Connectors</h1></a>
-              </h1>
-              <p><span style="font-weight: bold;">github</span>: <a
-                  href="https://github.com/bitstrings/m2e-connectors">https://github.com/bitstrings/m2e-connectors</a><br>
-              </p>
-              <h3><span style="font-weight: bold;">P2 Repositories</span></h3>
-              <h3><span style="font-weight: bold;"></span></h3>
-              <p><span style="font-weight: bold;">releases</span>: <a
-                  href="http://bitstrings.github.com/m2e-connectors-p2/releases">http://bitstrings.github.com/m2e-connectors-p2/releases</a><br>
-                <span style="font-weight: bold;">milestones</span>: <a
-                  href="http://bitstrings.github.com/m2e-connectors-p2/milestones">http://bitstrings.github.com/m2e-connectors-p2/milestones</a><br>
-              </p>
-              <h3>Plugin mapping<br>
-              </h3>
-              <p><span style="font-weight: bold;">Plugin</span>:
-                org.bitstrings.maven.plugins:dependencypath-maven-plugin<span
-                  style="font-weight: bold;"><br>
-                  <small>Home</small></span><small>: <a
-                    href="http://bitstrings.github.com/sites/dependencypath-maven-plugin/index.html">http://bitstrings.github.com/sites/dependencypath-maven-plugin/index.html</a></small><span
-                  style="font-weight: bold;"><br>
-                </span></p>
-              <p><span style="font-weight: bold;">Plugin</span>:
-                org.jvnet.jaxb2.maven2:maven-jaxb2-plugin (maven-jaxb20-plugin, maven-jaxb21-plugin, maven-jaxb22-plugin)<span
-                  style="font-weight: bold;"><br>
-                  <small>Home</small></span><small>: <a
-                    href="http://java.net/projects/maven-jaxb2-plugin/pages/Home">http://java.net/projects/maven-jaxb2-plugin/pages/Home</a></small><span
-                  style="font-weight: bold;"><br>
-                </span></p>
-              <p><span style="font-weight: bold;">Plugin</span>:
-                org.codehaus.mojo:jaxb2-maven-plugin<br>
-                <small><span style="font-weight: bold;">Home</span>: <a
-                    href="http://mojo.codehaus.org/jaxb2-maven-plugin">http://mojo.codehaus.org/jaxb2-maven-plugin</a></small><br><small>(Note: not required for jaxb2-maven-plugin version  1.5+)</small>
-              </p>
-              <p><span style="font-weight: bold;">Plugin</span>:
-                org.codehaus.mojo:xmlbeans-maven-plugin<br>
-                <small><span style="font-weight: bold;">Home</span>: <a
-href="http://mojo.codehaus.org/xmlbeans-maven-plugin">http://mojo.codehaus.org/xmlbeans-maven-plugin</a></small><br>
-              </p>
-              <br>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <br>
-    <p>Copyright &copy; 2013 bitstrings.org - Pino Silvaggio - Licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.<br></p>
-    <br>
-  </body>
-</html>
+&lt;/plugin&gt;</b></td><b>
+                    </b></tr><b>
+                  </b></tbody><b>
+                </b></table><b>
+    </b></td><b>
+    </b></tr><b>
+    </b></table><b>
+              </b><b><div></div></b><b>
+</b><a name="m2eConnectors"><h1><b>M2E Connectors</b></h1></a><b>
+              </b><b><h1></h1></b><b>
+              </b><p><span style="font-weight: bold;"><b>github</b></span><b>: </b><a
+                  href="https://github.com/bitstrings/m2e-connectors"><b>https://github.com/bitstrings/m2e-connectors</b></a><b><br></b><b>
+              </b></p><b>
+              </b><h3><span style="font-weight: bold;"><b>P2 Repositories</b></span></h3><b>
+              </b><h3><b><span style="font-weight: bold;"></span></b></h3><b>
+              </b><p><span style="font-weight: bold;"><b>releases</b></span><b>: </b><a
+                  href="http://bitstrings.github.com/m2e-connectors-p2/releases"><b>http://bitstrings.github.com/m2e-connectors-p2/releases</b></a><b><br></b><b>
+                </b><span style="font-weight: bold;"><b>milestones</b></span><b>: </b><a
+                  href="http://bitstrings.github.com/m2e-connectors-p2/milestones"><b>http://bitstrings.github.com/m2e-connectors-p2/milestones</b></a><b><br></b><b>
+              </b></p><b>
+              </b><h3><b>Plugin mapping</b><b><br></b><b>
+              </b></h3><b>
+              </b><p><span style="font-weight: bold;"><b>Plugin</b></span><b>:
+                org.bitstrings.maven.plugins:dependencypath-maven-plugin</b><span
+                  style="font-weight: bold;"><b><br></b><b>
+                  </b><small><b>Home</b></small></span><small><b>: </b><a
+                    href="http://bitstrings.github.com/sites/dependencypath-maven-plugin/index.html"><b>http://bitstrings.github.com/sites/dependencypath-maven-plugin/index.html</b></a></small><span
+                  style="font-weight: bold;"><b><br></b><b>
+                </b></span></p><b>
+              </b><p><span style="font-weight: bold;"><b>Plugin</b></span><b>:
+                org.jvnet.jaxb2.maven2:maven-jaxb2-plugin (maven-jaxb20-plugin, maven-jaxb21-plugin, maven-jaxb22-plugin)</b><span
+                  style="font-weight: bold;"><b><br></b><b>
+                  </b><small><b>Home</b></small></span><small><b>: </b><a
+                    href="http://java.net/projects/maven-jaxb2-plugin/pages/Home"><b>http://java.net/projects/maven-jaxb2-plugin/pages/Home</b></a></small><span
+                  style="font-weight: bold;"><b><br></b><b>
+                </b></span></p><b>
+              </b><p><span style="font-weight: bold;"><b>Plugin</b></span><b>:
+                org.codehaus.mojo:jaxb2-maven-plugin</b><b><br></b><b>
+                </b><small><span style="font-weight: bold;"><b>Home</b></span><b>: </b><a
+                    href="http://mojo.codehaus.org/jaxb2-maven-plugin"><b>http://mojo.codehaus.org/jaxb2-maven-plugin</b></a></small><b><br></b><small><b>(Note: not required for jaxb2-maven-plugin version  1.5+)</b></small><b>
+              </b></p><b>
+              </b><p><span style="font-weight: bold;"><b>Plugin</b></span><b>:
+                org.codehaus.mojo:xmlbeans-maven-plugin</b><b><br></b><b>
+                </b><small><span style="font-weight: bold;"><b>Home</b></span><b>: </b><a
+href="http://mojo.codehaus.org/xmlbeans-maven-plugin"><b>http://mojo.codehaus.org/xmlbeans-maven-plugin</b></a></small><b><br></b><b>
+              </b></p><b>
+              </b><b><br></b><b>
+            </b></td><b>
+          </b></tr><b>
+        </b></tbody><b>
+      </b></table><b>
+    </b></div><b>
+    </b><b><br></b><b>
+    </b><p><b>Copyright &copy; 2014 bitstrings.org - Pino Silvaggio - Licensed under the </b><a href="http://www.apache.org/licenses/LICENSE-2.0"><b>Apache License, Version 2.0</b></a><b>.</b><b><br></b></p><b>
+    </b><b><br></b><b>
+  </b></body><b>
+</b></html><b>
+</b>
