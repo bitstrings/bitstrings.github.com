@@ -125,6 +125,8 @@ This fork mainly exists to add missing features to the webstart goal of the org.
     <li>Webapp resources;</li>
     <li>Able to sign war archive;</li>
     <li>Fix regression: As of Java 6 > release 31 (applies to Java 7), the JDK sample directory doesn't exist anymore. The nbm maven plugin uses the jnlp servlet of sample to bootstrap the application. It is hard coded. The servlet is now part of the plugin;</li>
+    <li>JNLP Servlet leak fix;</li>
+    <li>Fix for modules loading hanging;</li>
     <li>Support for m2e lifecycle mapping;</li>
     <li>More robust jar signing to fix edge cases;</li>
     <li>Pack200.</li>
